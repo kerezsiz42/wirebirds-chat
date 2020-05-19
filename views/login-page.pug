@@ -1,0 +1,16 @@
+extends layout
+block content
+  .frame
+    form.ui.form.segment(action='/login' method='post' style='background-color: white;padding: 1em;')
+      h1.ui.dividing.header.center.aligned Wirebird's chat
+      .ui.left.icon.input.fluid.field
+        i.mail.icon
+        input(type='text' name='email' placeholder='Email address' autocomplete='off' autofocus)
+      .ui.left.icon.input.fluid.field
+        i.lock.icon
+        input(type='password' name='password' placeholder='Password')
+      .ui.two.column.grid
+        .column
+          button.ui.button.submit.fluid.teal Login
+        .column
+          a.ui.button.fluid(href="/register-page") Register
