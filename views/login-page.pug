@@ -1,8 +1,9 @@
-extends layout
+extends ./includes/layout
 block content
   .frame
     form.ui.form.segment(action='/login' method='post' style='background-color: white;padding: 1em;')
       h1.ui.dividing.header.center.aligned Wirebird's chat
+      include ./includes/validation
       .ui.left.icon.input.fluid.field
         i.mail.icon
         input(type='text' name='email' placeholder='Email address' autocomplete='off' autofocus)

@@ -1,11 +1,12 @@
-extends layout
+extends ./includes/layout
 block content
   .frame
     form.ui.form.segment(action='/register' method='post' style='background-color: white;padding: 1em;')
       h1.ui.dividing.header.center.aligned Wirebird's Chat Registration
+      include ./includes/validation
       .ui.left.icon.input.fluid.field
         i.user.icon
-        input(type='text' name='username' placeholder='Username' autofocus)
+        input(type='text' name='username' placeholder='Username' autocomplete='off' autofocus)
       .ui.left.icon.input.fluid.field
         i.mail.icon
         input(type='text' name='email' placeholder='Email address' autocomplete='off')
@@ -14,9 +15,9 @@ block content
         input(type='password' name='password' placeholder='Password')
       .ui.left.icon.input.fluid.field
         i.lock.icon
-        input(type='password' placeholder='Password again')
+        input(type='password' oninput='checkPassword()' placeholder='Type your password again')
       .ui.two.column.grid
         .column
           button.ui.button.submit.fluid.teal Register
         .column
-          a.ui.button.fluid(href="/") Back To Login
+          a.ui.button.fluid(href="/login-page") Back To Login

@@ -1,4 +1,4 @@
-extends layout
+extends ./includes/layout
 block content
   .frame
     header
@@ -8,21 +8,8 @@ block content
         div
         div
     main
-      .ui.divided.unstackable.items
-        .item
-          img(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=54')
-          
-        .item
-          img(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=54')
-          
-        .item
-          img(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=54')
-          
-        .item
-          img(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=54')
-          
-    footer
-      .ui.icon.input.large.fluid
-        input(type="text" placeholder="Search...")
-        i.circular.search.link.icon
-    
+      include ./includes/menu
+      .ui.icon.button.teal.circular.massive.create-button
+        i.ui.icon.add
+      content
+        
