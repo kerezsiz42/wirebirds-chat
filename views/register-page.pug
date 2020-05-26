@@ -1,9 +1,14 @@
-extends ./includes/layout
+extends layout
 block content
   .frame
     form.ui.form.segment(action='/register' method='post' style='background-color: white;padding: 1em;')
       h1.ui.dividing.header.center.aligned Wirebird's Chat Registration
-      include ./includes/validation
+      if errors.length
+        .ui.red.message
+          .header Validation errors:
+          ul.list
+            each error in errors
+              li= error
       .ui.left.icon.input.fluid.field
         i.user.icon
         input(type='text' name='username' placeholder='Username' autocomplete='off' autofocus)
@@ -12,7 +17,7 @@ block content
         input(type='text' name='email' placeholder='Email address' autocomplete='off')
       .ui.left.icon.input.fluid.field
         i.lock.icon
-        input(type='password' name='password' placeholder='Password')
+        input(type='password' oninput='checkPassword()' name='password' placeholder='Password')
       .ui.left.icon.input.fluid.field
         i.lock.icon
         input(type='password' oninput='checkPassword()' placeholder='Type your password again')

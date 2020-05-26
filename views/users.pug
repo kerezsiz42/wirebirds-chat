@@ -2,24 +2,25 @@ extends layout
 block content
   .frame
     header
-      h1 Conversations
+      h1 Create chat room
       .menu-icon
         div
         div
         div
     main
-      //Sidebar
       nav.ui.items.unstackable
         .ui.item.equal.width.two.column.grid.divided.middle.aligned
           .column
             img.ui.circular.image(src='https://semantic-ui.com/images/avatar/large/stevie.jpg')
           .column Logged in as: username
-        form.item
-          button.ui.button.fluid.teal(onclick='changeUsername()') Change Username
+        .item
+          a.ui.button.fluid.teal(href='/conversations') Conversations
         form.item(method='post' action='/logout')
           button.ui.button.fluid.yellow Logout
-      //Create conversation button
-      a.ui.icon.button.teal.circular.massive.create-button(href='/users')
-        i.ui.icon.add
       content
-        
+    footer
+      .ui.search.large
+        .ui.icon.input.fluid
+          input.prompt(type='text' placeholder='Search users to add...')
+          i.search.icon
+    

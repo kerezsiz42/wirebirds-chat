@@ -4,4 +4,4 @@ class Conversation {
   }
 }
 
-module.exports = COnversation;
+module.exports = Conversation;
