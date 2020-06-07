@@ -9,15 +9,29 @@ block content
         div
     main
       nav.ui.items.unstackable
-        .ui.item.equal.width.two.column.grid.divided.middle.aligned
-          .column
-            img.ui.circular.image(src='https://semantic-ui.com/images/avatar/large/stevie.jpg')
-          .column Logged in as: username
+        .item(style='align-items: center')
+          img.my-avatar(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=128')
+          .ui.label.large Username
         .item
           a.ui.button.fluid.teal(href='/conversations') Conversations
         form.item(method='post' action='/logout')
           button.ui.button.fluid.yellow Logout
       content
+        .ui.teal.message
+          .header Add users
+          ul.list
+            li Select other people you want to have a conversation with in this chat room.
+        .ui.items.divided.unstackable
+          .item(style='align-items: center')
+            img.my-avatar(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=128')
+            h2 Username
+          .item(style='align-items: center')
+            img.my-avatar(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=128')
+            h2 Username
+          .item(style='align-items: center')
+            img.my-avatar(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=128')
+            h2 Username
+          
     footer
       .ui.search.large
         .ui.icon.input.fluid

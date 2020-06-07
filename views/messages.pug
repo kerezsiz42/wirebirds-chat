@@ -9,10 +9,9 @@ block content
         div
     main
       nav.ui.items.unstackable
-        .ui.item.equal.width.two.column.grid.divided.middle.aligned
-          .column
-            img.ui.circular.image(src='https://semantic-ui.com/images/avatar/large/stevie.jpg')
-          .column Logged in as: username
+        .item(style='align-items: center')
+          img.my-avatar(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=128')
+          .ui.label.large Username
         .item
           a.ui.button.fluid.teal(href='/conversations') Conversations
         .item
@@ -26,5 +25,5 @@ block content
       content
     footer
       form.ui.form.large(style='display:flex')
-        textarea(rows='1' oninput='autoResize()' name='message' placeholder='Type your message...' style='resize: none; margin-right: 1em; border-radius: 2em; box-sizing: border-box')
+        textarea(rows='1' oninput='autoResize()' name='message' placeholder='Type your message...' style='resize: none; margin-right: 1em; border-radius: 2em')
         button.ui.button.teal.circular.large(style='align-self: center') Send

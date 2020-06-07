@@ -21,13 +21,8 @@ const changeUsername = () => {
   // Fetch endpoint with username
 }
 
-const getComputedHeight = (elem) => {
-  return parseFloat(window.getComputedStyle(elem, null).getPropertyValue('height'));
-}
-
-const textarea = document.querySelector('textarea');
 const autoResize = () => {
+  const textarea = document.querySelector('textarea');
   textarea.style.height = 'auto';
-  textarea.style.height = textarea.scrollHeight + 'px';
-  console.log(textarea.rows);
+  textarea.style.height = (textarea.scrollHeight < 100 ? textarea.scrollHeight : 100) + 'px';
 }

@@ -10,10 +10,9 @@ block content
     main
       //Sidebar
       nav.ui.items.unstackable
-        .ui.item.equal.width.two.column.grid.divided.middle.aligned
-          .column
-            img.ui.circular.image(src='https://semantic-ui.com/images/avatar/large/stevie.jpg')
-          .column Logged in as: username
+        .item(style='align-items: center')
+          img.my-avatar(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=128')
+          .ui.label.large Username
         form.item
           button.ui.button.fluid.teal(onclick='changeUsername()') Change Username
         form.item(method='post' action='/logout')
@@ -22,4 +21,9 @@ block content
       a.ui.icon.button.teal.circular.massive.create-button(href='/users')
         i.ui.icon.add
       content
-        
+        .ui.items.divided.unstackable
+          a.item(href='/messages' style='align-items: center')
+            img.my-avatar(src='https://gravatar.com/avatar/f41c30ef4ae6398cc925a61031c90fd6?s=128')
+            .div
+              h2 Conversation name
+              p user1, user2, user3
